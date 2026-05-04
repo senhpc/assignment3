@@ -1,0 +1,160 @@
+/* /////////////////////// */
+/* /// MAIN NAVBAR /// */
+/* /////////////////////// */
+
+.main-nav {
+  .nav-list {
+    position: relative;
+  }
+
+  li {
+    font-size: large;
+    padding: 1rem 1.5rem;
+    border-left: 1px solid var(--clr-light);
+  }
+
+  li:last-child {
+    border-right: 1px solid var(--clr-light);
+  }
+
+  a {
+    text-transform: uppercase;
+    color: var(--clr-dark);
+  }
+
+  a i {
+    color: var(--clr-blue);
+  }
+
+  li:has(.nav-avatar) {
+    display: block;
+    min-width: 200px;
+  }
+
+  .nav-avatar {
+    /* reserve a space for the avatar */
+    position: absolute;
+    height: auto;
+    display: block;
+
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    anchor-name: --avatar;
+    z-index: 3;
+
+    width: 130px;
+    height: 130px;
+
+    /* make avatar center of the navbar */
+    img {
+      object-position: center -10px;
+      border: 5px solid var(--clr-white);
+      border-radius: 50%;
+    }
+  }
+
+  /* create a popup when hover on the avatar */
+  .nav-avatar:hover + .avatar-info {
+    display: block;
+  }
+
+  .avatar-info {
+    display: none;
+    position: absolute;
+    width: max-content;
+    background-color: var(--clr-light-blue);
+    color: var(--clr-dark);
+    padding: 0.5rem 1rem;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 1px 1px 3px var(--clr-white);
+    line-height: 1.5;
+    position-anchor: --avatar;
+    position-area: bottom center;
+    top: calc(anchor(bottom) + 5rem);
+    z-index: 9;
+
+    h3 {
+      font-size: 1rem;
+      font-weight: bold;
+    }
+
+    p {
+      font-size: 0.8rem;
+      margin: 0;
+    }
+  }
+
+  /* create a triangle above popup */
+  .avatar-info::after {
+    position: absolute;
+    content: "";
+    border: 10px solid;
+    border-color: transparent transparent var(--clr-light-blue) transparent;
+    top: -8px;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: 9;
+  }
+}
+
+/* /////////////////////// */
+/* /// COMMON SECTIONS STYLE /// */
+/* /////////////////////// */
+
+/* /////////////////////// */
+/* /// TARGET AND INFORMATION /// */
+/* /////////////////////// */
+
+.target,
+.info {
+  padding: 3rem 6rem;
+}
+
+/* /////////////////////// */
+/* /// EXPERIENCE + EDUCATION + ACTIVITY /// */
+/* /// HOBBY + LANGUAGE + SKILL /// */
+/* /////////////////////// */
+
+/* /////////////////////// */
+/* /// CERTIFICATE + REWARD /// */
+/* /////////////////////// */
+
+.certificate {
+  .section-content-grid {
+    /* display: grid; */
+    grid-template-columns: 30% 1fr;
+  }
+}
+
+/* /// PROJECT /// */
+.project {
+  .subgrid .subtitle {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+    font-size: 0.8rem;
+
+    .year {
+      padding: 0.25rem 0.8rem;
+    }
+  }
+
+  .project-detail {
+    /* display: grid; */
+    gap: 1rem;
+    grid-template-columns: 8ch 1fr;
+  }
+}
+
+.footer {
+  a {
+    display: block;
+  }
+
+  i {
+    font-size: 2.5rem;
+  }
+}

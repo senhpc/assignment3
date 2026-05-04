@@ -1,0 +1,159 @@
+/* /////////////////////// */
+/* /// COMMON SECTIONS STYLE /// */
+/* /////////////////////// */
+
+.section-title {
+  font-size: var(--fs-md);
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  font-weight: bolder;
+  text-align: left;
+}
+
+/* /////////////////////// */
+/* /// BANNER /// */
+/* /////////////////////// */
+.banner {
+  .banner-overlay {
+    min-height: 80dvh;
+  }
+}
+
+/* /////////////////////// */
+/* /// MAIN NAVBAR /// */
+/* /////////////////////// */
+
+.main-nav {
+  .nav-list {
+    flex-direction: row;
+  }
+
+  li {
+    flex: 0 1 max-content;
+    text-align: center;
+    font-size: var(--fs-base);
+    padding: 1rem 1rem;
+    border: none;
+    border-left: 1px solid var(--clr-light);
+  }
+
+  li:last-child {
+    border-right: 1px solid var(--clr-light);
+  }
+
+  li:has(.nav-avatar) {
+    display: block;
+    width: 3rem;
+  }
+
+  .nav-avatar,
+  .avatar-info {
+    display: none;
+  }
+}
+
+/* /////////////////////// */
+/* /// TARGET AND INFORMATION /// */
+/* /////////////////////// */
+
+.intro-section {
+  grid-template-columns: 1fr 1fr;
+}
+
+/* /////////////////////// */
+/* /// EXPERIENCE + EDUCATION + ACTIVITY /// */
+/* /// HOBBY + LANGUAGE + SKILL /// */
+/* /////////////////////// */
+
+.details {
+  .inner-container {
+    grid-template-columns: 1fr 1fr;
+    /* columns: 2; */
+    padding-inline: 2rem;
+    gap: 1rem;
+  }
+
+  .details-item {
+    margin-bottom: 0;
+    border: 2px solid var(--clr-light);
+  }
+}
+
+/* /////////////////////// */
+/* /// CERTIFICATE + REWARD /// */
+/* /////////////////////// */
+
+.certificate {
+  .section-content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .section-content-grid {
+    grid-template-columns: 1fr;
+  }
+
+  h4 {
+    font-size: 1.2rem;
+  }
+}
+
+.project {
+  .section-content {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+
+  .subgrid {
+    display: grid;
+    grid-template-rows: subgrid;
+    grid-row: span 6;
+    gap: 0;
+    border: 2px solid var(--clr-light);
+  }
+
+  h3 {
+    font-size: 1.2rem;
+    margin: 0;
+  }
+
+  .subgrid .subtitle {
+    display: grid;
+    grid-template-columns: 8ch 1fr;
+    grid-template-rows: 1fr 1fr;
+    column-gap: 0.5rem;
+    row-gap: 0;
+    padding-left: 0.5rem;
+    padding: 1rem;
+
+    .year {
+      /* grid-row: span 2; */
+      text-align: center;
+      padding: 0.2rem 0.5em;
+    }
+
+    p:last-child {
+      grid-area: 2 / 2 / 3 / 3;
+    }
+  }
+
+  .project-detail {
+    grid-template-columns: 5ch 1fr;
+    gap: 0.5rem;
+  }
+}
+
+/* /// FOOTER /// */
+.footer {
+  span {
+    display: block;
+  }
+
+  a {
+    display: flex;
+    align-items: center;
+  }
+
+  i {
+    font-size: var(--fs-xxl);
+  }
+}
