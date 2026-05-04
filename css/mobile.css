@@ -593,8 +593,8 @@ h2:has([aria-expanded="true"]) {
 
   img {
     width: 100%;
-    height: auto;
-    object-fit: contain;
+    /* height: auto; */
+    /* object-fit: contain; */
     padding: 0;
   }
 
