@@ -114,6 +114,7 @@ p {
   font-size: 0.95em;
   font-style: italic;
   color: var(--clr-dark);
+  margin-bottom: 0.5rem;
 }
 
 .year::before {
@@ -132,17 +133,55 @@ p {
 }
 
 /* AREA TEAMS */
-/* .area-team {
-  .item {
-    --gap: 1.5rem;
+.area-team {
+  counter-reset: member-counter;
+
+  .member-counter {
+    counter-increment: member-counter;
+
+    &::after {
+      content: " " counter(member-counter, decimal-leading-zero);
+    }
   }
-} */
+}
 
 /* AREA SCOPES */
 .area-scopes {
+  /* .item:not(:last-child) {
+    border-bottom: 1px solid var(--clr-semi-dark);
+    padding-bottom: 0.8rem;
+  } */
+
+  .item {
+    --border-style: solid;
+  }
+
+  .item.item:not(:first-child) {
+    margin-top: 0.5rem;
+  }
+
   .year::before {
     font-weight: normal;
     content: "\f017";
+  }
+
+  h3 ~ div {
+    padding-left: 1rem;
+  }
+
+  h4 {
+    margin-top: 0.8rem;
+    font-style: italic;
+  }
+
+  h4::before {
+    font-family: "Font Awesome 7 Free";
+    font-style: normal;
+    margin-right: 1ch;
+    font-weight: 400;
+    /* color: var(--clr-semi-dark); */
+    content: "\f02e";
+    opacity: 0.6;
   }
 }
 
@@ -187,6 +226,10 @@ p {
     /* font-style: italic; */
     content: "\f101";
   }
+
+  /* p {
+    text-align: unset;
+  } */
 }
 
 @media screen and (width >= 768px) {
@@ -259,29 +302,25 @@ p {
     }
 
     .item {
-      /* flex-direction: column;
-    --gap: 2rem; */
       display: block;
       flex: 1;
     }
 
-    h4 {
-      margin-top: 0.8rem;
-      font-style: italic;
+    .item:not(:last-child) {
+      border-bottom: none;
+      padding-bottom: unset;
     }
 
-    h4::before {
-      font-family: "Font Awesome 7 Free";
-      font-style: normal;
-      margin-right: 1ch;
-      font-weight: 400;
-      /* color: var(--clr-semi-dark); */
-      content: "\f02e";
-      opacity: 0.6;
+    .item.item:not(:first-child) {
+      margin-top: unset;
     }
 
     p:not(:last-child) {
       margin-bottom: 0.5ch;
+    }
+
+    h3 ~ div {
+      padding-left: unset;
     }
   }
 

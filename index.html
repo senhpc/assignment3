@@ -10,37 +10,33 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
       integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
       crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
+      referrerpolicy="no-referrer" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
-      crossorigin="anonymous"
-    />
+      crossorigin="anonymous" />
 
-    <link rel="stylesheet" href="./css/font.css" />
-    <link rel="stylesheet" href="./css/mobile.css" />
-    <link
-      rel="stylesheet"
-      href="./css/tablet.css"
-      media="screen and (min-width: 768px)"
-    />
-    <link
-      rel="stylesheet"
-      href="./css/laptop.css"
-      media="screen and (min-width: 992px)"
-    />
+    <!-- <link rel="stylesheet" href="./css/font.css" /> -->
 
     <!-- thêm defer để chờ đến HTML tải xong mới chạy js -->
     <script
       defer
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-      crossorigin="anonymous"
-    ></script>
+      crossorigin="anonymous"></script>
     <script defer src="js/script.js"></script>
     <title>Assignment03</title>
+
+    <link rel="stylesheet" href="./css/mobile.css" />
+    <link
+      rel="stylesheet"
+      href="./css/tablet.css"
+      media="screen and (min-width: 768px)" />
+    <link
+      rel="stylesheet"
+      href="./css/laptop.css"
+      media="screen and (min-width: 992px)" />
   </head>
   <body>
     <div class="cv-container">
@@ -65,7 +61,7 @@
             <a href="#resume"><i class="fa-solid fa-file"></i> Lý lịch</a>
           </li>
           <li>
-            &nbsp;
+            &ZeroWidthSpace;
             <div class="nav-avatar" href="#">
               <img src="images/FX88656-PHONG-CHAN-SENH.png" alt="avatar" />
             </div>
@@ -89,98 +85,112 @@
       <section class="intro-section" id="intro">
         <!-- TARGET -->
         <div class="target">
-          <h2 class="section-title">Mục tiêu nghề nghiệp</h2>
-          <div class="section-content">
-            <p>
-              Là một sinh viên đã hoàn thành chương trình chứng chỉ Doanh Nghiệp
-              của FUNiX. Em mong muốn mình sẽ đi làm việc với vị trí Fullstack
-              Developer, có thể vận dụng những kiến thức đã được trau dồi và
-              không ngừng học hỏi phát triển bản thân, cũng như hoàn thành tốt
-              nhất công việc được giao.
-            </p>
+          <div class="hero-wrapper">
+            <h2 class="section-title">Mục tiêu nghề nghiệp</h2>
+            <div class="section-content">
+              <p>
+                Là một sinh viên đã hoàn thành chương trình chứng chỉ Doanh
+                Nghiệp của FUNiX. Em mong muốn mình sẽ đi làm việc với vị trí
+                Fullstack Developer, có thể vận dụng những kiến thức đã được
+                trau dồi và không ngừng học hỏi phát triển bản thân, cũng như
+                hoàn thành tốt nhất công việc được giao.
+              </p>
+            </div>
           </div>
         </div>
 
         <!-- PERSONAL INFO -->
         <div class="info">
-          <h2 class="section-title">Thông tin cá nhân</h2>
-          <form id="email-form">
-            <div class="mb-3">
-              <input
-                type="email"
-                class="form-control"
-                id="InputEmail"
-                required
-                aria-describedby="emailHelp"
-              />
-              <div id="emailHelp" class="form-text">
-                Hãy nhập email để xác thực!
+          <div class="hero-wrapper">
+            <h2 class="section-title">Thông tin cá nhân</h2>
+            <form id="email-form" class="email-form">
+              <div class="form-content">
+                <div class="mb-3">
+                  <label for="input-email" class="form-label"
+                    >Hãy nhập email để xác thực!</label
+                  >
+                  <div class="input-group">
+                    <span class="input-group-text input-icon">✉</span>
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="input-email"
+                      required
+                      aria-describedby="emailHelp"
+                      placeholder="abc@mail.com" />
+                    <div class="invalid-feedback">
+                      Email không đúng định dạng!
+                    </div>
+                  </div>
+                </div>
+                <button class="btn btn-success btn-check-email" type="button">
+                  Submit
+                </button>
+              </div>
+            </form>
+            <div class="section-content info-content-wrapper collapse-content">
+              <div class="info-content">
+                <div>
+                  <span class="bold">Giới tính:</span>
+                  <span>Nam</span>
+                </div>
+                <div>
+                  <span class="bold">Ngày sinh:</span>
+                  <span>24/02/1986</span>
+                </div>
+                <div>
+                  <span class="bold">Điện thoại:</span>
+                  <span><a href="tel:+84932719889">(+84) 932719889</a></span>
+                </div>
+                <div>
+                  <span class="bold">Email:</span>
+                  <span>
+                    <a href="mailto:senhpcfx88656@funix.edu.vn"
+                      >senhpcfx88656@funix.edu.vn</a
+                    >
+                  </span>
+                </div>
+                <div>
+                  <span class="bold">Địa chỉ:</span>
+                  <span
+                    >239/1/34 Khuông Việt, Tân Phú, HCM, Việt Nam
+                    <a
+                      class="maps"
+                      title="Find me on Gooogle Maps"
+                      href="https://maps.app.goo.gl/AQXctBKTaL762S2d6"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      ><i class="fa-solid fa-arrow-up-right-from-square"></i></a
+                  ></span>
+                </div>
+                <div>
+                  <span class="bold">Website:</span>
+                  <span>
+                    <a
+                      href="https://sinhphong.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >https://sinhphong.com</a
+                    >
+                  </span>
+                </div>
+
+                <ul class="social-icons">
+                  <li>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="fa-brands fa-google-plus-g"></i></a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                  </li>
+                </ul>
               </div>
             </div>
-            <button class="btn btn-primary btn-check-email" type="button">
-              Submit
-            </button>
-          </form>
-          <div class="section-content info-content hiding">
-            <div>
-              <span class="bold">Giới tính:</span>
-              <span>Nam</span>
-            </div>
-            <div>
-              <span class="bold">Ngày sinh:</span>
-              <span>24/02/1986</span>
-            </div>
-            <div>
-              <span class="bold">Điện thoại:</span>
-              <span><a href="tel:+84932719889">(+84) 932719889</a></span>
-            </div>
-            <div>
-              <span class="bold">Email:</span>
-              <span>
-                <a href="mailto:senhpcfx88656@funix.edu.vn"
-                  >senhpcfx88656@funix.edu.vn</a
-                >
-              </span>
-            </div>
-            <div>
-              <span class="bold">Địa chỉ:</span>
-              <span
-                >239/1/34 Khuông Việt, Tân Phú, HCM, Việt Nam
-                <a
-                  class="maps"
-                  title="Find me on Gooogle Maps"
-                  href="https://maps.app.goo.gl/AQXctBKTaL762S2d6"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  ><i class="fa-solid fa-arrow-up-right-from-square"></i></a
-              ></span>
-            </div>
-            <div>
-              <span class="bold">Website:</span>
-              <span>
-                <a
-                  href="https://sinhphong.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >https://sinhphong.com</a
-                >
-              </span>
-            </div>
-
-            <ul class="social-icons">
-              <li>
-                <a href="#"><i class="icon-twitter"></i></a>
-              </li>
-              <li>
-                <a href="#"><i class="icon-facebook"></i></a>
-              </li>
-              <li>
-                <a href="#"><i class="icon-gplus"></i></a>
-              </li>
-              <li>
-                <a href="#"><i class="icon-linkedin"></i></a>
-              </li>
-            </ul>
           </div>
         </div>
       </section>
@@ -188,243 +198,198 @@
       <!-- SHOWCASE DETAILS -->
       <section class="details" id="resume">
         <div class="inner-container">
-          <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-5">
+          <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
             <div class="col">
-              <div class="accordion details-item" id="experience">
+              <div class="details-item h-100" id="experience">
                 <div class="title-container">
                   <h2 class="section-title">Kinh nghiệm</h2>
                   <i class="fa-solid fa-laptop-code"></i>
                 </div>
-                <div class="accordion-item">
-                  <h2 class="accordion-header">
-                    <button
-                      class="collapsed btn btn-primary btn-view-more"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#collapseExperience"
-                      aria-expanded="false"
-                      aria-controls="collapseExperience"
-                    >
-                      Show more
-                    </button>
-                  </h2>
-                  <div
-                    id="collapseExperience"
-                    class="accordion-collapse collapse"
-                    data-bs-parent="#experience"
-                  >
-                    <div class="accordion-body">
-                      <div>
-                        <h3>Dạy tiếng Hoa online</h3>
-                        <div class="timeline">
-                          06/2021 - <span class="highlight">Hiện tại</span>
-                        </div>
-                        <p>Giáo viên giảng dạy</p>
-                        <ul>
-                          <li>
-                            Thiết kế giáo án bằng các công cụ: Word, PPT, PTS.
-                          </li>
-                          <li>
-                            Sử dụng các công cụ dạy học online: Google Meeting,
-                            Zoom, Zalo.
-                          </li>
-                        </ul>
+                <button
+                  class="btn btn-primary btn-view-more is-collapsed"
+                  type="button">
+                  <div class="text-slide">
+                    <span>View More</span>
+                    <span>View Less</span>
+                  </div>
+                </button>
+                <div class="details-item-wrapper collapse-content">
+                  <div class="details-item-content">
+                    <div>
+                      <h3>Dạy tiếng Hoa online</h3>
+                      <div class="timeline">
+                        06/2021 - <span class="highlight">Hiện tại</span>
                       </div>
+                      <p>Giáo viên giảng dạy</p>
+                      <ul>
+                        <li>
+                          Thiết kế giáo án bằng các công cụ: Word, PPT, PTS.
+                        </li>
+                        <li>
+                          Sử dụng các công cụ dạy học online: Google Meeting,
+                          Zoom, Zalo.
+                        </li>
+                      </ul>
+                    </div>
 
-                      <div>
-                        <h3>Chậu nhựa Sinh Phong</h3>
-                        <div class="timeline">
-                          07/2018 - <span class="highlight">Hiện tại</span>
-                        </div>
-                        <p>Người sáng lập</p>
-                        <ul>
-                          <li>
-                            Tạo content cho trang web (sản phẩm, bài viết,
-                            chương trình khuyến mãi). Thiết kế website theo từng
-                            thời kỳ.
-                          </li>
-                          <li>
-                            Tư vấn và hỗ trợ khách hàng qua các kênh Zalo,
-                            Facebook, Messenger.
-                          </li>
-                        </ul>
+                    <div>
+                      <h3>Chậu nhựa Sinh Phong</h3>
+                      <div class="timeline">
+                        07/2018 - <span class="highlight">Hiện tại</span>
                       </div>
+                      <p>Người sáng lập</p>
+                      <ul>
+                        <li>
+                          Tạo content cho trang web (sản phẩm, bài viết, chương
+                          trình khuyến mãi). Thiết kế website theo từng thời kỳ.
+                        </li>
+                        <li>
+                          Tư vấn và hỗ trợ khách hàng qua các kênh Zalo,
+                          Facebook, Messenger.
+                        </li>
+                      </ul>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
+
             <div class="col">
-              <div class="accordion details-item" id="education">
+              <div class="details-item h-100" id="education">
                 <div class="title-container">
                   <h2 class="section-title">Học Vấn</h2>
                   <i class="fa-solid fa-graduation-cap"></i>
                 </div>
-                <div class="accordion-item">
-                  <h2 class="accordion-header">
-                    <button
-                      class="collapsed btn btn-primary btn-view-more"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#collapseEducation"
-                      aria-expanded="false"
-                      aria-controls="collapseEducation"
-                    >
-                      Show more
-                    </button>
-                  </h2>
-                  <div
-                    id="collapseEducation"
-                    class="accordion-collapse collapse"
-                    data-bs-parent="#education"
-                  >
-                    <div class="accordion-body">
-                      <div>
-                        <h3>FUNiX</h3>
-                        <div class="timeline">06/2021 - 05/2022</div>
-                        <ul>
-                          <li>
-                            Tốt nghiệp chứng chỉ doanh nghiệp nhánh Fullstack
-                          </li>
-                          <li>GPA: 9 / 10</li>
-                        </ul>
-                      </div>
-                      <div>
-                        <h3>Cử nhân - ĐH FPT</h3>
-                        <div class="timeline">08/2016 - 07/2019</div>
-                        <ul>
-                          <li>Chuyên ngành: Kỹ thuật phần mềm</li>
-                          <li>GPA: 3.2 / 4</li>
-                        </ul>
-                      </div>
-                      <div>
-                        <h3>Đại học Hà Nội</h3>
-                        <div class="timeline">08/2016 - 02/2018</div>
-                        <ul>
-                          <li>Hệ từ xa. Chuyên ngành: ngôn ngữ Nhật</li>
-                          <li>GPA: 3.2 / 4</li>
-                        </ul>
-                      </div>
+                <button
+                  class="btn btn-primary btn-view-more is-collapsed"
+                  type="button">
+                  <div class="text-slide">
+                    <span>View More</span>
+                    <span>View Less</span>
+                  </div>
+                </button>
+                <div class="details-item-wrapper collapse-content">
+                  <div class="details-item-content">
+                    <div>
+                      <h3>FUNiX</h3>
+                      <div class="timeline">06/2021 - 05/2022</div>
+                      <ul>
+                        <li>
+                          Tốt nghiệp chứng chỉ doanh nghiệp nhánh Fullstack
+                        </li>
+                        <li>GPA: 9 / 10</li>
+                      </ul>
+                    </div>
+                    <div>
+                      <h3>Cử nhân - ĐH FPT</h3>
+                      <div class="timeline">08/2016 - 07/2019</div>
+                      <ul>
+                        <li>Chuyên ngành: Kỹ thuật phần mềm</li>
+                        <li>GPA: 3.2 / 4</li>
+                      </ul>
+                    </div>
+                    <div>
+                      <h3>Đại học Hà Nội</h3>
+                      <div class="timeline">08/2016 - 02/2018</div>
+                      <ul>
+                        <li>Hệ từ xa. Chuyên ngành: ngôn ngữ Nhật</li>
+                        <li>GPA: 3.2 / 4</li>
+                      </ul>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
+
             <div class="col">
-              <div class="accordion details-item" id="activity">
+              <div class="details-item h-100" id="activity">
                 <div class="title-container">
                   <h2 class="section-title">Hoạt động</h2>
                   <i class="fa-solid fa-chart-line"></i>
                 </div>
-                <div class="accordion-item">
-                  <h2 class="accordion-header">
-                    <button
-                      class="collapsed btn btn-primary btn-view-more"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#collapseActivity"
-                      aria-expanded="false"
-                      aria-controls="collapseActivity"
-                    >
-                      Show more
-                    </button>
-                  </h2>
-                  <div
-                    id="collapseActivity"
-                    class="accordion-collapse collapse"
-                    data-bs-parent="#activity"
-                  >
-                    <div class="accordion-body">
-                      <div>
-                        <h3>FPT Edu Hackathon 2019</h3>
-                        <div class="timeline">03/2019 - 05/2019</div>
-                        <ul>
-                          <li>Giải 3 bảng A</li>
-                          <li>Đề tài: Trang web về phân loại rác thải</li>
-                        </ul>
-                      </div>
-                      <div>
-                        <h3>Câu lạc bộ Z</h3>
-                        <div class="timeline">08/2016 - 08/2017</div>
-                        <ul>
-                          <li>Trưởng ban chuyên môn</li>
-                        </ul>
-                      </div>
-                      <div>
-                        <h3>Câu lạc bộ X</h3>
-                        <div class="timeline">08/2016</div>
-                        <ul>
-                          <li>
-                            Hỗ trợ tổ chức tuần lễ văn hóa Việt Nam - Nhật Bản
-                          </li>
-                        </ul>
-                      </div>
+                <button
+                  class="btn btn-primary btn-view-more is-collapsed"
+                  type="button">
+                  <div class="text-slide">
+                    <span>View More</span>
+                    <span>View Less</span>
+                  </div>
+                </button>
+                <div class="details-item-wrapper collapse-content">
+                  <div class="details-item-content">
+                    <div>
+                      <h3>FPT Edu Hackathon 2019</h3>
+                      <div class="timeline">03/2019 - 05/2019</div>
+                      <ul>
+                        <li>Giải 3 bảng A</li>
+                        <li>Đề tài: Trang web về phân loại rác thải</li>
+                      </ul>
+                    </div>
+                    <div>
+                      <h3>Câu lạc bộ Z</h3>
+                      <div class="timeline">08/2016 - 08/2017</div>
+                      <ul>
+                        <li>Trưởng ban chuyên môn</li>
+                      </ul>
+                    </div>
+                    <div>
+                      <h3>Câu lạc bộ X</h3>
+                      <div class="timeline">08/2016</div>
+                      <ul>
+                        <li>
+                          Hỗ trợ tổ chức tuần lễ văn hóa Việt Nam - Nhật Bản
+                        </li>
+                      </ul>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
+
             <div class="col">
-              <div class="accordion details-item" id="hobby">
+              <div class="details-item h-100" id="hobby">
                 <div class="title-container">
                   <h2 class="section-title">Sở thích</h2>
                   <i class="fa-solid fa-icons"></i>
                 </div>
-                <div class="accordion-item">
-                  <h2 class="accordion-header">
-                    <button
-                      class="collapsed btn btn-primary btn-view-more"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#collapseHobby"
-                      aria-expanded="false"
-                      aria-controls="collapseHobby"
-                    >
-                      Show more
-                    </button>
-                  </h2>
-                  <div
-                    id="collapseHobby"
-                    class="accordion-collapse collapse"
-                    data-bs-parent="#hobby"
-                  >
-                    <div class="accordion-body">
-                      <div class="grid-container">
-                        <div><i class="fa-solid fa-music"></i>Âm nhạc</div>
-                        <div><i class="fa-solid fa-paw"></i>Thú cưng</div>
-                        <div><i class="fa-solid fa-plane"></i>Du lịch</div>
-                        <div><i class="fa-solid fa-utensils"></i>Nấu ăn</div>
-                      </div>
+                <button
+                  class="btn btn-primary btn-view-more is-collapsed"
+                  type="button">
+                  <div class="text-slide">
+                    <span>View More</span>
+                    <span>View Less</span>
+                  </div>
+                </button>
+                <div class="details-item-wrapper collapse-content">
+                  <div class="details-item-content">
+                    <div class="grid-container">
+                      <div><i class="fa-solid fa-music"></i> Âm nhạc</div>
+                      <div><i class="fa-solid fa-paw"></i> Thú cưng</div>
+                      <div><i class="fa-solid fa-plane"></i> Du lịch</div>
+                      <div><i class="fa-solid fa-utensils"></i> Nấu ăn</div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
+
             <div class="col">
-              <div class="accordion details-item" id="language">
+              <div class="details-item h-100" id="language">
                 <div class="title-container">
                   <h2 class="section-title">Ngôn ngữ</h2>
                   <i class="fa-solid fa-language"></i>
                 </div>
-                <div class="accordion-item">
-                  <h2 class="accordion-header">
-                    <button
-                      class="collapsed btn btn-primary btn-view-more"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#collapseLanguage"
-                      aria-expanded="false"
-                      aria-controls="collapseLanguage"
-                    >
-                      Show more
-                    </button>
-                  </h2>
-                  <div
-                    id="collapseLanguage"
-                    class="accordion-collapse collapse"
-                    data-bs-parent="#language"
-                  >
-                    <div class="accordion-body">
+                <button
+                  class="btn btn-primary btn-view-more is-collapsed"
+                  type="button">
+                  <div class="text-slide">
+                    <span>View More</span>
+                    <span>View Less</span>
+                  </div>
+                </button>
+                <div class="details-item-wrapper collapse-content">
+                  <div class="details-item-content">
+                    <div>
                       <div>English - IELTS 7.0</div>
                       <div class="level" data-level="2">
                         <span></span><span></span><span></span>
@@ -442,32 +407,25 @@
                 </div>
               </div>
             </div>
+
             <div class="col">
-              <div class="accordion details-item" id="skill">
+              <div class="details-item h-100" id="skill">
                 <div class="title-container">
                   <h2 class="section-title">Kỹ năng</h2>
                   <i class="fa-solid fa-gear"></i>
                 </div>
-                <div class="accordion-item">
-                  <h2 class="accordion-header">
-                    <button
-                      class="collapsed btn btn-primary btn-view-more"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#collapseSkill"
-                      aria-expanded="false"
-                      aria-controls="collapseSkill"
-                    >
-                      Show more
-                    </button>
-                  </h2>
-                  <div
-                    id="collapseSkill"
-                    class="accordion-collapse collapse"
-                    data-bs-parent="#skill"
-                  >
-                    <div class="accordion-body">
-                      <div>HTML/CSS: Fundanmental</div>
+                <button
+                  class="btn btn-primary btn-view-more is-collapsed"
+                  type="button">
+                  <div class="text-slide">
+                    <span>View More</span>
+                    <span>View Less</span>
+                  </div>
+                </button>
+                <div class="details-item-wrapper collapse-content">
+                  <div class="details-item-content">
+                    <div>
+                      <div>HTML/CSS: Fundamental</div>
                       <div class="level" data-level="2">
                         <span></span><span></span><span></span>
                       </div>
@@ -479,7 +437,7 @@
                       <div class="level" data-level="3">
                         <span></span><span></span><span></span>
                       </div>
-                      <div>Bootstrap 5: Fundanmental</div>
+                      <div>Bootstrap 5: Fundamental</div>
                       <div class="level" data-level="1">
                         <span></span><span></span><span></span>
                       </div>
@@ -662,24 +620,27 @@
 
       <!-- FOOTER -->
       <section class="footer" id="footer">
-        <div class="section-content">
-          <ol>
-            <li>
-              <a href="https://facebook.com/sinhphong86"
-                ><i class="icon-facebook-circled"></i><span>Facebook</span></a
-              >
-            </li>
-            <li>
-              <a href="https://linkedin.com/sinhphong86"
-                ><i class="icon-linkedin-circled"></i><span>Linkedin</span></a
-              >
-            </li>
-            <li>
-              <a href="https://github.com/senhpc"
-                ><i class="icon-github-circled"></i><span>Github</span></a
-              >
-            </li>
-          </ol>
+        <div class="inner-container">
+          <div class="section-content">
+            <ol>
+              <li>
+                <a href="https://facebook.com/sinhphong86"
+                  ><i class="fa-brands fa-facebook"></i><span>Facebook</span></a
+                >
+              </li>
+              <li>
+                <a href="https://linkedin.com/sinhphong86"
+                  ><span><i class="fa-brands fa-linkedin-in"></i></span
+                  ><span>Linkedin</span></a
+                >
+              </li>
+              <li>
+                <a href="https://github.com/senhpc"
+                  ><i class="fa-brands fa-github"></i><span>Github</span></a
+                >
+              </li>
+            </ol>
+          </div>
         </div>
       </section>
     </div>
