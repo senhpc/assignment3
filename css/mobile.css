@@ -171,15 +171,17 @@ html {
     /* text-align: center; */
     text-transform: uppercase;
     font-size: var(--fs-md);
-    padding: 1rem 3rem;
     border-top: 1px solid var(--clr-light);
   }
 
   /* li:last-child {
     border-bottom: 1px solid var(--clr-light);
-  } */
+    } */
 
   a {
+    display: block;
+    width: 100%;
+    padding: 1rem 3rem;
     text-transform: uppercase;
     color: var(--clr-dark);
   }
