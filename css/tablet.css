@@ -46,6 +46,10 @@
     width: 3rem;
   }
 
+  a {
+    padding: unset;
+  }
+
   .nav-avatar,
   .avatar-info {
     display: none;
