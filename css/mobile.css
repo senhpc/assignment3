@@ -592,15 +592,17 @@ span.bold {
         background: var(--line-color);
       }
 
+      /* draw vertical line */
       &::before {
         width: var(--line-thickness);
-        height: 100vh;
+        height: max(100vh, 100vw);
         inset-block-start: 0;
         inset-inline-start: calc(var(--gap) / -2);
       }
 
+      /* draw horizon line */
       &::after {
-        width: 100vw;
+        width: max(100vh, 100vw);
         height: var(--line-thickness);
         inset-block-start: calc(var(--gap) / -2);
         inset-inline-start: 0;
