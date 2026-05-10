@@ -41,21 +41,13 @@ inputEmail.addEventListener("keydown", (e) => {
 
 // ---- BUTTON VIEW MORE ---- //
 
-// select all btn view more, change the inner html
-// const viewMoreBtns = document.querySelectorAll(".btn-view-more");
-
-// viewMoreBtns.forEach((btn) => {
-//   if (btn) {
-//     btn.innerHTML = `<div class="text-slide"><span>View More</span><span>View Less</span></div>`;
-//   }
-// });
-
+// Ủy quyền sự kiện Event Delegation
 const resume = document.querySelector("#resume");
 resume.addEventListener("click", (e) => {
   // tìm nút view-more vừa click
   const btn = e.target.closest(".btn-view-more");
   if (!btn) return;
-  // tìm details-item chứa btn
+  // tìm class details-item chứa btn
   const detailsItem = btn.closest(".details-item");
   // tìm wrapper trong details-item và toggle class collapse-content
   const contentWrapper = detailsItem.querySelector(".details-item-wrapper");

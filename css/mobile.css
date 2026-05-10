@@ -49,10 +49,6 @@ ul {
   padding: 0;
 }
 
-/* p {
-  margin: 0;
-} */
-
 a {
   text-decoration: none;
 }
@@ -77,10 +73,6 @@ html {
 .collapse-content {
   grid-template-rows: 0fr !important;
 }
-
-/* .collapsed {
-  grid-template-rows: 0fr;
-} */
 
 /* .error {
   color: var(--bs-danger);
@@ -167,8 +159,6 @@ html {
 
   li {
     width: 100%;
-    /* flex: 1 0 100%; */
-    /* text-align: center; */
     text-transform: uppercase;
     font-size: var(--fs-md);
     border-top: 1px solid var(--clr-light);
@@ -271,10 +261,6 @@ span.bold {
     grid-template-rows: 1fr;
     transition: grid-template-rows 0.5s ease-in-out;
   }
-
-  /* .collapse-content {
-    grid-template-rows: 0fr;
-  } */
 
   .info-content,
   .form-content {
@@ -459,10 +445,6 @@ span.bold {
   position: relative;
 }
 
-/* .collapse-content {
-  grid-template-rows: 0fr;
-} */
-
 .details-item-wrapper::before {
   content: "";
   position: absolute;
@@ -492,25 +474,11 @@ span.bold {
 
 #hobby {
   .grid-container {
-    --max-columns: 2;
-    --gap: 1rem;
-    --min-col-width: 30px;
-
-    /* Calculation Part */
-    --calc-col-size: calc(
-      (100% - var(--gap) * (var(--max-columns) - 1)) / var(--max-columns)
-    );
-    --calc-col-min-size: max(var(--min-col-width), var(--calc-col-size));
-
+    margin-top: 0.5rem;
     display: grid;
-    grid-template-columns: repeat(
-      auto-fit,
-      minmax(min(var(--calc-col-min-size, 100%)), 1fr)
-    );
-    gap: var(--gap);
+    grid-template-columns: 1fr 1fr;
 
     div {
-      /* flex: 0 0 1; */
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -548,10 +516,12 @@ span.bold {
 }
 
 /* check data-level to highlight level bar */
+/* mặc định sẽ sáng cả 3 thanh, nếu level = 1 thì bôi đen tất cả, ngoài thanh số 1 */
 .level[data-level="1"] span:not(:nth-child(1)) {
   background-color: var(--clr-semi-dark);
 }
 
+/* nếu level = 2, bôi đen thanh số 3 */
 .level[data-level="2"] span:nth-child(3) {
   background-color: var(--clr-semi-dark);
 }
@@ -571,6 +541,7 @@ span.bold {
     display: grid;
     grid-template-columns: 1fr;
     gap: var(--gap);
+    align-content: start;
   }
 
   .grid-ruler {
@@ -585,6 +556,7 @@ span.bold {
       padding: var(--padding);
       position: relative;
 
+      /* kẽ các đường ngang dọc cho bảng */
       &::before,
       &::after {
         content: "";
@@ -592,20 +564,20 @@ span.bold {
         background: var(--line-color);
       }
 
-      /* draw vertical line */
+      /* kẽ đường dọc */
       &::before {
         width: var(--line-thickness);
         height: max(100vh, 100vw);
-        inset-block-start: 0;
-        inset-inline-start: calc(var(--gap) / -2);
+        top: 0;
+        left: calc(var(--gap) / -2);
       }
 
-      /* draw horizon line */
+      /* kẽ đường ngang */
       &::after {
         width: max(100vh, 100vw);
         height: var(--line-thickness);
-        inset-block-start: calc(var(--gap) / -2);
-        inset-inline-start: 0;
+        top: calc(var(--gap) / -2);
+        left: 0;
       }
     }
   }
@@ -614,6 +586,8 @@ span.bold {
     display: grid;
     grid-template-columns: 1fr;
     gap: 1rem;
+    align-content: start;
+    padding: 0;
   }
 
   h4 {

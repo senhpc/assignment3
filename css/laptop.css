@@ -54,13 +54,15 @@
 
     width: 130px;
     height: 130px;
+
+    /* canh giữa avatar */
     inset: 0;
     margin: auto;
+
     border: 5px solid var(--clr-white);
     border-radius: 50%;
     overflow: hidden;
 
-    /* make avatar center of the navbar */
     img {
       width: 100%;
       aspect-ratio: 1;
@@ -86,7 +88,6 @@
     line-height: 1.5;
     position-anchor: --avatar;
     position-area: bottom center;
-    /* top: calc(anchor(bottom) + 5rem); */
     translate: 0 4.5rem;
     z-index: 9;
 
